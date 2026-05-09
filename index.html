@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f8ff;
+  color: #111827;
+  line-height: 1.6;
+}
+
+.hero {
+  min-height: 90vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
+    url("https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #7dd3fc;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #7dd3fc;
+}
+
+.hero-content {
+  padding: 140px 8%;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  margin: 25px 0;
+  color: #e5e7eb;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #0284c7;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0369a1;
+  transform: translateY(-3px);
+}
+
+.secondary {
+  background: #7dd3fc;
+  color: #0f172a;
+}
+
+.section {
+  padding: 80px 8%;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.intro p {
+  font-size: 1.2rem;
+}
+
+.dark {
+  background: #0f172a;
+  color: white;
+}
+
+.stats-grid,
+.player-grid,
+.schedule-grid,
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.stat-card,
+.player-card,
+.game-card,
+.map-card {
+  background: white;
+  color: #111827;
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  transition: 0.3s;
+}
+
+.dark .player-card,
+.dark .map-card {
+  background: #1e293b;
+  color: white;
+  border: 1px solid #334155;
+}
+
+.stat-card:hover,
+.player-card:hover,
+.game-card:hover,
+.map-card:hover {
+  transform: translateY(-8px);
+}
+
+.stat-card h3 {
+  font-size: 3rem;
+  color: #0284c7;
+}
+
+.stat-card p {
+  font-weight: bold;
+}
+
+.table-box {
+  margin-top: 40px;
+  overflow-x: auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #0284c7;
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover {
+  background: #f0f9ff;
+}
+
+.number {
+  width: 60px;
+  height: 60px;
+  background: #7dd3fc;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.player-card h3,
+.game-card h3,
+.map-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #020617;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+  }
+
+  .hero-content {
+    padding-top: 90px;
+  }
+
+  .section {
+    padding: 60px 5%;
+  }
+}
